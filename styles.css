@@ -4,11 +4,17 @@
   border: 0;
 }
 
+html {
+  height: calc(100% - 2rem);
+  /* Note this height rule may need to change later - its just a close guess */
+}
+
 body {
-  /* font:  */
-  background-color: rgb(17, 19, 24);
+  font-family: Lato;
+  background-color: rgb(14, 15, 17);
   color: #ffffff;
-  /* text-align: center; */
+  height: 100%;
+  width: 100%;
 }
 
 table 
@@ -25,8 +31,16 @@ td
 
 .navbar {
   height: 4rem;
-  width: 100vw;
+  /* width: 100%; */
   padding: 1rem;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 4rem);
 }
 
 .nav-home {
@@ -34,3 +48,37 @@ td
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
 }
+
+.project-card {
+  width: 25rem;
+  height: 12.5rem;
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: height;
+  transition: flex 0.3s ease-out;
+}
+
+.project-card-extended {
+  height: 50rem;
+}
+
+.project-card-1 {
+  /* background-color: #6c98f1; */
+  background: rgb(120,121,232);
+  background: linear-gradient(0deg, rgba(120,121,232,1) 0%, rgba(108,152,241,1) 25%, rgba(108,152,241,1) 75%, rgba(122,215,233,1) 100%);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-header {
+  font-size: xx-large;
+}
+
+/* grabameeting colors
+#797ef4
+#6c98f1
+#7ad7e9
+*/
