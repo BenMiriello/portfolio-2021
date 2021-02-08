@@ -31,7 +31,6 @@ td
 
 .navbar {
   height: 4rem;
-  /* width: 100%; */
   padding: 1rem;
 }
 
@@ -50,7 +49,7 @@ td
 }
 
 .project-card {
-  width: 25rem;
+  width: 30vw;
   height: 12.5rem;
   border-radius: 1rem;
   padding: 1rem;
@@ -59,18 +58,26 @@ td
 }
 
 .project-card-extended {
-  height: 50rem;
+  height: 80vh;
 }
 
 .project-card-1 {
   /* background-color: #6c98f1; */
-  background: rgb(120,121,232);
-  background: linear-gradient(0deg, rgba(120,121,232,1) 0%, rgba(108,152,241,1) 25%, rgba(108,152,241,1) 75%, rgba(122,215,233,1) 100%);
+  background: rgba(108,152,241,1);
   color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.project-card-1-extended {
+  background: linear-gradient(
+    0deg,
+    rgba(120,121,232,1) 0%,
+    rgba(108,152,241,1) 25%,
+    rgba(108,152,241,1) 75%,
+    rgba(122,215,233,1) 100%);
 }
 
 .project-card-header {
