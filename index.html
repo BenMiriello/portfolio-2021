@@ -21,11 +21,33 @@
   </nav>
 
   <div class='page'>
-    <div data-controller='project-card'>
-      <div data-project-card-target='container' class='project-card-container'>
-        <div data-action='click->project-card#toggle' class='project-card project-card-1'>
-          <div class='project-card-header'>
-            Grab a Meeting
+    <div class='project-cards-container'>
+      <div data-controller='project-card'>
+        <div data-project-card-target='container' class='project-card-container'>
+          <div data-action='click->project-card#toggle' class='project-card project-card-1'>
+            <div class='project-card-header'>
+              Grab a Meeting
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-controller='project-card'>
+        <div data-project-card-target='container' class='project-card-container'>
+          <div data-action='click->project-card#toggle' class='project-card project-card-1'>
+            <div class='project-card-header'>
+              Grab a Meeting Video
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div data-controller='project-card'>
+        <div data-project-card-target='container' class='project-card-container'>
+          <div data-action='click->project-card#toggle' class='project-card project-card-2'>
+            <div class='project-card-header'>
+              Our Radicondoli
+            </div>
           </div>
         </div>
       </div>
