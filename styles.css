@@ -1,3 +1,5 @@
+/* Global config rules */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,6 +31,19 @@ td
   font-weight: normal; 
 }
 
+
+
+/* NOTES -----------------------------------------------------------------------
+
+grabameeting colors
+#797ef4
+#6c98f1
+#7ad7e9
+
+*/
+
+
+
 .navbar {
   height: 4rem;
   padding: 1rem;
@@ -48,44 +63,52 @@ td
   text-transform: uppercase;
 }
 
-.project-card {
-  width: 30vw;
-  height: 12.5rem;
+.project-card-container {
+  position: relative;
+  height: 20vw;
+  width: 20vw;
+  
+  transform: translateY(-2rem); /* move up 1/2 navbar height */
   border-radius: 1rem;
-  padding: 1rem;
-  transition: height;
-  transition: flex 0.3s ease-out;
-}
+  overflow: hidden;
 
-.project-card-extended {
-  height: 80vh;
-}
-
-.project-card-1 {
-  /* background-color: #6c98f1; */
-  background: rgba(108,152,241,1);
-  color: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.project-card-1-extended {
-  background: linear-gradient(
-    0deg,
-    rgba(120,121,232,1) 0%,
-    rgba(108,152,241,1) 25%,
-    rgba(108,152,241,1) 75%,
-    rgba(122,215,233,1) 100%);
+.project-card-container-extended {
+  height: 80vh;
+  width: 40vw;
+}
+
+.project-card {
+  position: fixed;
+  width: 40vw;
+  height: 80vh;
+  /* transition: height; */
+  /* transition: flex 0.3s ease-out; */
+
+  border-radius: 1rem;
+  padding: 1rem;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.project-card-1 {
+  background: rgba(108,152,241,1);
+  background: linear-gradient(0deg,
+    rgb(127, 120, 232) 0%,
+    rgba(108,152,241,1) 50%,
+    rgb(122, 192, 233) 100%
+  );
+  color: #fff;
 }
 
 .project-card-header {
   font-size: xx-large;
 }
-
-/* grabameeting colors
-#797ef4
-#6c98f1
-#7ad7e9
-*/
