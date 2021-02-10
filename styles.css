@@ -65,9 +65,9 @@ grabameeting colors
 
 .project-card-container {
   position: relative;
-  height: 20vw;
-  width: 20vw;
-  
+  min-height: 20vw;
+  min-width: 20vw;
+
   transform: translateY(-2rem); /* move up 1/2 navbar height */
   border-radius: 1rem;
   overflow: hidden;
@@ -76,11 +76,13 @@ grabameeting colors
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  transition: min-height 0.5s, min-width 1s;
 }
 
 .project-card-container-extended {
-  height: 80vh;
-  width: 40vw;
+  min-height: 80vh;
+  min-width: 30vw;
 }
 
 .project-card {
