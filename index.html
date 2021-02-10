@@ -8,7 +8,7 @@
   <title>Ben Miriello</title>
 
   <link rel='preconnect' href='https://fonts.gstatic.com'>
-  <link href='https://fonts.googleapis.com/css2?family=Lato&family=Oswald&display=swap' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Lato&family=Oswald&family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
   <link rel='stylesheet' href='styles.css'></link>
 
   <script src='https://unpkg.com/stimulus/dist/stimulus.umd.js'></script>
@@ -27,29 +27,38 @@
       <div data-controller='pc' class='pc-container'>
         <div data-pc-target='frame' class='pc-frame'>
           <div data-action='click->pc#toggle' class='pc pc-1'>
-            <div class='pc-header'>
-              Grab a Meeting
-            </div>
+          </div>
+        </div>
+
+        <div class='pc-text-container'>
+          <div class='pc-header'>
+            Grab a Meeting
           </div>
         </div>
       </div>
 
-      <div data-controller='pc'>
+      <div data-controller='pc' class='pc-container'>
         <div data-pc-target='frame' class='pc-frame'>
           <div data-action='click->pc#toggle' class='pc pc-2'>
-            <div class='pc-header'>
-              Grab a Meeting Video
-            </div>
+          </div>
+        </div>
+
+        <div class='pc-text-container'>
+          <div class='pc-header'>
+            Grab a Meeting Video
           </div>
         </div>
       </div>
 
-      <div data-controller='pc'>
+      <div data-controller='pc' class='pc-container'>
         <div data-pc-target='frame' class='pc-frame'>
           <div data-action='click->pc#toggle' class='pc pc-3'>
-            <div class='pc-header'>
-              Our Radicondoli
-            </div>
+          </div>
+        </div>
+
+        <div class='pc-text-container'>
+          <div class='pc-header'>
+            Our Radicondoli
           </div>
         </div>
       </div>

@@ -35,14 +35,22 @@ td
 
 
 
-/* NOTES -----------------------------------------------------------------------
+/* Variables ----------------------------------------------------------------- */
 
+
+
+
+/* NOTES ----------------------------------------------------------------------- */
+
+/*
 grabameeting colors
 #797ef4
 #6c98f1
 #7ad7e9
 
 */
+
+/* max mobile width: 800px; */
 
 
 
@@ -51,45 +59,54 @@ grabameeting colors
   padding: 1rem;
 }
 
-.page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: calc(100% - 4rem);
-  margin: 1vw;
-}
-
 .nav-home {
   font-size: xx-large;
   font-family: 'Oswald', sans-serif;
   text-transform: uppercase;
 }
 
+.page {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  height: calc(100% - 4rem);
+  margin: 1vw;
+}
+
 /* NAMING: pc = project card */
 
 .pc-group-container {
   width: 100%;
-  height: 100%;
+  height: 300%;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 5vw;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (min-width: 800px) {
   .pc-group-container {
-    flex-direction: column;
+    flex-direction: row;
+    height: 100%
   }
+}
+
+.pc-container {
+  height: calc(100vh - 4rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .pc-frame {
   position: relative;
-  min-height: 30vw;
-  min-width: 30vw;
+  min-height: 95vw;
+  min-width: 95vw;
 
-  transform: translateY(-2rem); /* move up 1/2 navbar height */
+  transform: translateY(0rem); /* I don't understand why, but this rule keeps the pc background contained & overflow-hidden inside the frame */
   border-radius: 1rem;
   overflow: hidden;
 
@@ -101,15 +118,29 @@ grabameeting colors
   transition: min-height 0.5s, min-width 1s;
 }
 
+@media only screen and (min-width: 800px) {
+  .pc-frame {
+    min-width: 30vw;
+    min-height: 30vw;
+  }
+}
+
 .pc-frame-extended {
-  min-height: 80vh;
-  min-width: 37vw;
+  min-width: 95vw;
+  min-height: 85vh;
+}
+
+@media only screen and (min-width: 800px) {
+  .pc-frame-extended {
+    min-width: 37vw;
+    min-height: 95vh;
+  }
 }
 
 .pc {
   position: fixed;
-  width: 40vw;
-  height: 80vh;
+  width: 95vw;
+  height: 95vh;
   /* transition: height; */
   /* transition: flex 0.3s ease-out; */
 
@@ -120,6 +151,12 @@ grabameeting colors
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+@media only screen and (min-width: 800px) {
+  .pc {
+    width: 40rem;
+  }
 }
 
 .pc-1 {
@@ -143,6 +180,12 @@ grabameeting colors
   color: #fff;
 }
 
+.pc-text-container {
+  padding: 1rem;
+}
+
 .pc-header {
   font-size: x-large;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
 }
