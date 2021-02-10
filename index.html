@@ -12,7 +12,7 @@
   <link rel='stylesheet' href='styles.css'></link>
 
   <script src='https://unpkg.com/stimulus/dist/stimulus.umd.js'></script>
-  <script src='controllers/project_card_controller.js'></script>
+  <script src='controllers/pc_controller.js'></script>
 </head>
 <body>
 
@@ -20,32 +20,34 @@
     <div class='nav-home'>Ben Miriello</div>
   </nav>
 
+  <!-- NAMING: pc = project card -->
+
   <div class='page'>
-    <div class='project-cards-container'>
-      <div data-controller='project-card'>
-        <div data-project-card-target='container' class='project-card-container'>
-          <div data-action='click->project-card#toggle' class='project-card project-card-1'>
-            <div class='project-card-header'>
+    <div class='pc-group-container'>
+      <div data-controller='pc' class='pc-container'>
+        <div data-pc-target='frame' class='pc-frame'>
+          <div data-action='click->pc#toggle' class='pc pc-1'>
+            <div class='pc-header'>
               Grab a Meeting
             </div>
           </div>
         </div>
       </div>
 
-      <div data-controller='project-card'>
-        <div data-project-card-target='container' class='project-card-container'>
-          <div data-action='click->project-card#toggle' class='project-card project-card-1'>
-            <div class='project-card-header'>
+      <div data-controller='pc'>
+        <div data-pc-target='frame' class='pc-frame'>
+          <div data-action='click->pc#toggle' class='pc pc-2'>
+            <div class='pc-header'>
               Grab a Meeting Video
             </div>
           </div>
         </div>
       </div>
 
-      <div data-controller='project-card'>
-        <div data-project-card-target='container' class='project-card-container'>
-          <div data-action='click->project-card#toggle' class='project-card project-card-2'>
-            <div class='project-card-header'>
+      <div data-controller='pc'>
+        <div data-pc-target='frame' class='pc-frame'>
+          <div data-action='click->pc#toggle' class='pc pc-3'>
+            <div class='pc-header'>
               Our Radicondoli
             </div>
           </div>
