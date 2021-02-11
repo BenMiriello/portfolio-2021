@@ -103,8 +103,10 @@ grabameeting colors
 
 .pc-frame {
   position: relative;
-  min-height: 95vw;
-  min-width: 95vw;
+  max-height: 24rem;
+  max-width: 24rem;
+  height: 95vw;
+  width: 95vw;
 
   transform: translateY(0rem); /* I don't understand why, but this rule keeps the pc background contained & overflow-hidden inside the frame */
   border-radius: 1rem;
@@ -115,19 +117,24 @@ grabameeting colors
   justify-content: center;
   align-items: center;
 
-  transition: min-height 0.5s, min-width 1s;
+  transition: max-height 0.5s, max-width 1s;
 }
 
 @media only screen and (min-width: 800px) {
   .pc-frame {
-    min-width: 30vw;
-    min-height: 30vw;
+    max-width: 30vw;
+    max-height: 30vw;
+    width: 20rem;
+    height: 20rem;
   }
 }
 
 .pc-frame-extended {
-  min-width: 95vw;
-  min-height: 85vh;
+  width: 95vw;
+  height: 85vh;
+  max-width: 95vw;
+  max-height: 85vh;
+  transition: max-height 0.5s, max-width 1s;
 }
 
 @media only screen and (min-width: 800px) {
@@ -166,7 +173,9 @@ grabameeting colors
     rgba(108,152,241,1) 50%,
     rgb(122, 192, 233) 100%
   ); */
-  background: rgb(108,152,241,1);
+  /* background: rgb(108,152,241,1); */
+  /* background: linear-gradient(0deg, rgb(42, 80, 163) 0%, rgb(146, 182, 255) 100%); */
+  background: linear-gradient(0deg, rgba(50,90,173,1) 0%, rgba(108,152,241,1) 40%, rgba(108,152,241,1) 60%, rgba(140,173,240,1) 100%);
   color: #fff;
 }
 
@@ -180,12 +189,47 @@ grabameeting colors
   color: #fff;
 }
 
-.pc-text-container {
-  padding: 1rem;
+.pc-header-container {
+  width: 100%;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+  /* margin-left: 3rem; */
+  /* margin-right: 3rem; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .pc-header {
   font-size: x-large;
   font-family: 'Roboto', sans-serif;
   font-weight: 500;
+}
+
+.pc-plus {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 50%;
+}
+
+.pc-plus-1 {
+  background-color: rgb(89, 137, 233);
+}
+
+.pc-plus-2 {
+  background-color: rgb(127, 120, 232)
+}
+
+.pc-plus-3 {
+  background-color: #75b53b;
+}
+
+.pc-grabameeting-icon {
+  /* width: 3.75rem;
+  height: 6.75rem; */
+  width: 8rem;
+  height: 8rem;
+  
+  /* -webkit-box-shadow: -5px 5px 10px 5px #0006A3;  */
+  filter: drop-shadow(-5px 5px 5px rgb(19, 52, 117));
 }
